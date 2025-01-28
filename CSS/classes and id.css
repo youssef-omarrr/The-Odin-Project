@@ -1,0 +1,92 @@
+/* 
+~<!-- index.html -->
+<div class="alert-text">Please agree to our terms of service.</div>
+
+~styles.css
+.alert-text {
+    color: red;}
+  
+
+~<!-- index.html -->
+<div id="title">My Awesome 90's Page</div>
+
+~styles.css 
+#title {
+    background-color: red;}
+
+NOTES:
+~The major difference between classes and IDs is that an element can only have one ID
+
+~Another thing you can do with the class attribute is to add multiple classes 
+to a single element as a space-separated list, such as class="alert-text severe-alert"
+    */
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* ~ if we have two groups of elements that share some of their style declarations
+.read {
+    color: white;
+    background-color: black;
+    /* several unique declarations 
+}
+.unread {
+    color: white;
+    background-color: black;
+    /* several unique declarations 
+}
+
+~we can group these two selectors together as a comma-separated list:
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations 
+}
+
+.unread {
+  /* several unique declarations 
+} */
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* <div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection" id="preview">
+    This is where a preview for a post might go.
+  </p>
+</div>
+
+.subsection.header {
+    color: red;
+  }
+  
+  .subsection#preview {
+    color: blue;
+  }
+   */
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+p{
+    color: red;
+    background-color: blue;
+    font-family: "times new roman";
+    font-size: large;
+    font-weight: 900;
+    text-align: center;
+}
+img{
+    height: auto;
+    width: 500px;
+}
