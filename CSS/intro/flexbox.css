@@ -1,0 +1,92 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+flex is actually a shorthand for flex-grow, flex-shrink and flex-basis. 
+
+flex: 1 equates to: flex-grow: 1, flex-shrink: 1, flex-basis: 0.
+flex: auto equates to: flex-grow: 1, flex-shrink: 1, flex-basis: auto.
+
+*/
+
+/* 
+flex-direction:
+The default direction for a flex container is horizontal, 
+or row, but you can change the direction to vertical, or column.
+
+when we changed the flex-direction to column, flex-basis refers to height instead of width
+*/
+
+.container div{
+    border: 5px solid red;
+    background: bisque;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+}
+
+/* CONTAINER */
+.container .three{
+    height: 200px;
+    padding: 10px;
+
+    /* main-axis (mainly horizontally) */
+    justify-content: center;  
+
+    /* cross-axis (vertically) */
+    align-items: center;    
+
+    gap: 18px;
+}
+/* ITEMS */
+.container .three div{
+    margin: 10px;
+    background-color: black;
+    border: 5px solid blueviolet;
+    
+    height: 75px;
+    width: 75px;
+    /* flex: 1; */
+}
+
+
+/* flex-grow the number is used as the flex-item’s “growth factor”. 
+    When we applied flex: 1 to every div inside our container, 
+    we were telling every div to grow the same amount. 
+    The result of this is that every div ends up the exact same size. 
+        If we instead add flex: 2 to just one of the divs, 
+        then that div would grow to 2x the size of the others. */
+
+/* flex-shrink is similar to flex-grow, but sets the “shrink factor” of a flex item. 
+    flex-shrink only ends up being applied if the size of all flex items is larger than their parent container. 
+    For example, if our 3 divs from above had a width declaration like: width: 100px, 
+    and .flex-container was smaller than 300px, our divs would have to shrink to fit. */
+
+/* flex-basis sets the initial size of a flex item, 
+    so any sort of flex-growing or flex-shrinking starts from that baseline size. 
+    The shorthand value defaults to flex-basis: 0%. 
+        The reason we had to change it to auto in the flex-shrink 
+        example is that with the basis set to 0, 
+        those items would ignore the item’s width, 
+        and everything would shrink evenly. 
+        Using auto as a flex-basis tells the item to check for a width declaration */
+
+.container .two .contcont{
+    border: 5px solid rgb(4, 165, 165);
+    background: rgb(255, 140, 0);
+    height: 70px;
+    margin: 10px;
+    display: flex;
+    flex: 1;
+}
+
+.two div{
+    margin: 10px;
+    height: auto;
+    background-color: rgb(209, 16, 16);
+    border: 5px solid rgb(16, 23, 161);
+    flex: 1;
+}

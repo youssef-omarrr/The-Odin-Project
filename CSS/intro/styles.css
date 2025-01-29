@@ -1,0 +1,102 @@
+body{
+    color: aqua;
+    background-color: black;
+}
+.test{
+    color:red;
+}
+
+#test{
+    color: bisque;
+}
+
+.pop{
+    color: blueviolet;
+    background-color: aquamarine;
+    text-align: center;
+    font-size: xx-large;
+}
+
+button{
+    font-family: "times new roman";
+    color: darkred;
+    height: 100px;
+}
+
+.parent1 .child{
+    color: lightcoral;
+    font-size: xx-large;
+    text-align: center;
+}
+.parent1{
+    text-align: center;
+    font-size: 100px;
+}
+
+.but1, 
+.but2
+{
+    font-size: 75px;
+    text-align: center;
+    width: 200px;
+
+}
+
+.but1{
+    color: brown;
+    text-align: right;
+    width: 300px;
+}
+.but2{
+    color: dodgerblue;
+    outline: 10px solid blue;
+    margin: 0 50px 0;
+    block-size: 100px;
+}
+
+/* margin: [top] [left-and-right] [bottom]; */
+
+*{
+    outline: 2px solid red;
+}
+
+.fuck{
+    position: relative;
+    margin-top: 50px;
+}
+/* Div is a block-level element by default. 
+It is commonly used as a container element to group other elements. 
+Divs allow us to divide the page into different blocks and apply styling to those blocks. */
+
+/* Span is an inline-level element by default.
+It can be used to group text content and inline HTML elements
+for styling and should only be used when no other semantic HTML element is appropriate. */
+
+/*
+display:block 
+    This makes the element a block-level element.
+    Block elements take up the full width of their container by default.
+    Starts on a new line.
+    Common block elements: <div>, <p>, <h1> - <h6>, <section>, <article>, <header>, <footer>.
+
+display: inline;
+    The element only takes up as much width as its content.
+    Stays in the same line as other inline elements.
+    Cannot set width or height.
+
+display: inline-block;
+    Like inline, but allows width & height to be set.
+    Stays in the same line, but can have padding, margins, and a defined width.
+
+display: flex;
+    Makes the element a flex container, enabling flexible child element positioning.
+    Aligns children horizontally (row) or vertically (column).
+
+display: grid;
+    Turns the element into a grid container, 
+    allowing placement of child elements in rows and columns.
+
+margin/ padding: x y
+    x -> top and buttom
+    y -> left and right
+*/
