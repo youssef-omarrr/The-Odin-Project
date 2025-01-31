@@ -17,22 +17,56 @@ for (let i = 0; i < 4; i++) {
 
 const buttons = document.querySelectorAll(".butts");
 const screen = document.getElementById("screen");
+const small_screen = document.getElementById("smallscreen");
+
+let is_operator = false;
+let is_equal = false;
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        if (screen.textContent == "Error!")
+
+        if (screen.textContent == "Error!") {
             screen.textContent = '';
-        
+            small_screen.textContent = '';
+        }
+
         switch (button.textContent) {
+
+            case '/':
+            case '*':
+            case '-':
+            case '+':
+                if (is_operator)
+                    break;
+                is_operator = true;
+                is_equal = false;
+                screen.textContent += button.textContent;
+                break;
+
             case 'C':
+                is_operator = false;
+                is_equal = false;
                 screen.textContent = '';
+                small_screen.textContent = '';
                 break;
 
             case '=':
+                if (is_operator)
+                    break;
+                if (is_equal)
+                    break;
+                is_operator = false;
+                is_equal = true;
                 calculate();
                 break;
 
             default:
+                if (is_equal) {
+                    screen.textContent = '';
+                    small_screen.textContent = '';
+                    is_equal = false;
+                }
+                is_operator = false;
                 screen.textContent += button.textContent;
                 break;
         }
@@ -69,27 +103,28 @@ function calculate() {
     let ans = numbers.slice(1).reduce((acc, number, index) => {
         switch (operators[index]) {
             case ('/'):
-                if (number === 0){
+                if (number === 0) {
                     flag_zero = true;
                     break;
                 }
-                return acc/number;
+                return acc / number;
             case '*':
-                return acc*number;
+                return acc * number;
             case '-':
-                return acc-number;
+                return acc - number;
             case '+':
-                return acc+number;
+                return acc + number;
             default:
                 return acc;
         }
     }, numbers[0]);
 
-    if (flag_zero){
+    if (flag_zero) {
         screen.textContent = "Error!";
         return;
     }
 
+    small_screen.textContent = input + ' = ';
     screen.textContent = ans;
 
 }
