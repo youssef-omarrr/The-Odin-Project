@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 25px;
+    padding: 0;;
+    gap: 25px;
+    height: 100vh; /* Make the body full height */
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.title{
+    font-family: Charm;
+    color: rgb(0, 133, 241);
+    font-size: 75px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+input{
+    border-radius: 7px;
+    padding: 5px;
+    max-width: 200px;
+}
+
+.in{
+    color: crimson;
+    font-size: 20px;
+}
+
+.butts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+button{
+    border-radius: 7px;
+    padding: 5px;
+    width: 200px;
+    font-weight: 700;
+}
+
+#container{
+    margin-left: 2400px; /* Adjust container width for space on the left */
+    background-color: crimson;
+    border: 10px solid;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap : 1px;
+    padding: 0;
+    margin: 0;
+
+    height: 100%; /* Take full height available */
+    overflow: hidden; /* Ensure it doesn't overflow outside of its container */
+}
+
