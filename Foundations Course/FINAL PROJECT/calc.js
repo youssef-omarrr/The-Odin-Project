@@ -34,6 +34,8 @@ buttons.forEach((button) => {
 
             case '/':
             case '*':
+                if (!screen.textContent)
+                    break;
             case '-':
             case '+':
                 if (is_operator)
@@ -76,8 +78,13 @@ buttons.forEach((button) => {
 
 function calculate() {
     let flag_zero = false;
+    let input;
+    if (!small_screen){
+        input = small_screen.textContent + screen.textContent;
+    }
+    else
+        input = screen.textContent;
 
-    let input = screen.textContent;
     console.log(input);
 
     // Extract numbers and operators separately
@@ -120,6 +127,7 @@ function calculate() {
     }, numbers[0]);
 
     if (flag_zero) {
+        small_screen.textContent = '';
         screen.textContent = "Error!";
         return;
     }
