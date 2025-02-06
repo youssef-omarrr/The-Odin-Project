@@ -1,0 +1,22 @@
+
+thead {
+    background-color: antiquewhite;
+    border: 2px solid black;
+}
+
+table {
+    border: 2px solid black;
+    margin: 10px;
+
+    /* edits the space between borders */
+    /* border-spacing: 0.5px; */
+
+    /* remove the space between the table and the items borders */
+    /* border-collapse: collapse; */
+  }
+
+td, th{
+    border: 2px solid rgb(0, 72, 155);
+}
+
+

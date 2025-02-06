@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="tables.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>First Header</th>
+            <th>Second Header</th>
+        </tr>
+        <tr>
+            <td>This is a data cell</td>
+            <td>This is also a data cell!</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Purchase</th>
+                <th scope="col">Location</th>
+                <th scope="col">Date</th>
+                <th scope="col">Evaluation</th>
+                <th scope="col">Cost (€)</th>
+            </tr>
+
+            <tr>
+                <th scope="row">Haircut</th>
+                <td>Hairdresser</td>
+                <td>12/09</td>
+                <td>Great idea</td>
+                <td>30</td>
+            </tr>
+
+        </thead>
+    </table>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Favorite Color</th>
+        </tr>
+        <tr>
+            <td>Jim</td>
+            <td>00001</td>
+            <td>Blue</td>
+        </tr>
+        <tr>
+            <td>Sue</td>
+            <td>00002</td>
+            <td>Red</td>
+        </tr>
+        <tr>
+            <td>Barb</td>
+            <td>00003</td>
+            <td>Green</td>
+        </tr>
+    </table>
+
+
+    <table id="wopwop">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Favorite Color</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Jim</td>
+                <td>00001</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>Sue</td>
+                <td>00002</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <td>Barb</td>
+                <td>00003</td>
+                <td>Green</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <!-- 
+      tr: table rows
+      th: table header
+      td: table data
+      <td>&nbsp;</td> for empty cell
+
+      scope: can be added to the <th> element to tell
+        screen readers is it a header for the row it is in,
+        or the column
+
+     (inside <th> or <td>): colspan and rowspan.
+      -->
+</body>
+
+</html>
