@@ -1,0 +1,86 @@
+/* Using a <background-color> */
+*{background: green;}
+
+/* Using a <bg-image> and <repeat-style> */
+*{background: url("test.jpg") repeat-y;}
+
+/* Using a <box> and <background-color> */
+*{background: border-box red;}
+
+/* A single image, centered and scaled */
+*{background: no-repeat center/80% url("../img/image.png");}
+
+/* Global values */
+*{background: inherit;}
+*{background: initial;}
+*{background: revert;}
+*{background: unset;}
+
+
+
+
+
+
+/* Keyword values */
+*{box-shadow: none;}
+
+/* If only two values are given:
+    they are interpreted as <offset-x> and <offset-y> values.
+If a third value is given:
+    it is interpreted as a <blur-radius>.
+If a fourth value is given: 
+    it is interpreted as a <spread-radius>. */
+
+/* A color and two length values */
+/* <color> | <length> | <length> */
+*{box-shadow: red 60px -16px;}
+
+/* Three length values and a color */
+/* <length> | <length> | <length> | <color> */
+*{box-shadow: 10px 5px 5px black;}
+
+/* Four length values and a color */
+/* <length> | <length> | <length> | <length> | <color> */
+*{box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);}
+
+/* inset, length values, and a color */
+/* <inset> | <length> | <length> | <color> */
+/* Changes the shadow from an outer box-shadow to an inner box-shadow */
+*{box-shadow: inset 5em 1em gold;} 
+
+/* Any number of shadows, separated by commas */
+*{box-shadow:
+  3px 3px red inset,
+  -1em 0 0.4em olive;}
+
+/* Global values */
+*{box-shadow: inherit;}
+*{box-shadow: initial;}
+*{box-shadow: revert;}
+*{box-shadow: unset;}
+
+
+
+
+
+
+/* Keyword values */
+*{overflow: visible;}
+*{overflow: hidden;}
+*{overflow: clip;}
+*{overflow: scroll;}
+*{overflow: auto;}
+*{overflow: hidden visible;}
+
+/* Global values */
+*{overflow: inherit;}
+*{overflow: initial;}
+*{overflow: revert;}
+*{overflow: unset;}
+
+/* ellipsis */
+.overflowing {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

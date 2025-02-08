@@ -1,0 +1,53 @@
+* {
+    color: rgb(0, 42, 255);
+    background: linear-gradient(90deg, blue, red);
+}
+
+/*  calc() */
+:root {
+    --header: 3rem;
+    --footer: 40px;
+    --main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
+
+/* min() */
+#iconHolder {
+    width: min(150px, 100%);
+    height: min(150px, 100%);
+    box-sizing: border-box;
+    border: 6px solid blue;
+}
+
+/*
+    min(150px, 100%)
+If there are 150px available to the image, it will take up all 150px.
+If there are not 150px available, the image will switch to 100% of the parent’s width.  */
+
+
+/* max() */
+* {
+    width: max(100px, 4em, 50%);
+}
+
+/* From this list of given sizes, max() will select the largest one.
+ As long as 4em or 50% result in lengths longer than 100px, 
+ max() will select (the bigger) one of them. 
+ 
+ If they are smaller than 100px (maybe as a cause of user’s font size preferences,
+ or their browser’s window size or zoom level), then 100px will win out as the largest.
+ 
+ You can think of 100px in this example as a guard value:
+ width here won’t ever be set to less than 100px. */
+
+
+/* clamp() */
+
+h1 {
+    font-size: clamp(320px, 80vw, 60rem);
+}
+
+/* clamp() is a great way to make elements fluid and responsive. clamp() takes 3 values:
+  the smallest value (320px)
+  the ideal value (80vw)
+  the largest value (60rem) */

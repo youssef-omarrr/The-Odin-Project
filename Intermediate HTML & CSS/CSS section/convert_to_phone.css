@@ -1,0 +1,42 @@
+.wrapper{
+    width: 1000px;
+    background-color: rebeccapurple;
+    padding: 10px;
+    font-size: x-large;
+}
+
+/* "only screen and"
+additional safety */
+
+/* max-width sets the lower bounds (acts like the opposite) */
+@media only screen and (max-width: 600px) and (orientation: landscape){
+
+    /* only change what needs to be changed */
+    .wrapper{
+        width: 100%;
+        background-color: orange;
+    }
+}
+
+
+@media only screen and (min-width: 601px){
+
+    /* only change what needs to be changed */
+    .wrapper{
+        width: 100%;
+        color: red;
+    }
+}
+@media only screen and (min-width: 768px){
+
+    /* only change what needs to be changed */
+    .wrapper{
+        width: 100%;
+        color: blue;
+    }
+}
+
+
+/* typicall breakpoints: 
+    <600px, 601px, 768px, 992px, >1200px
+*/

@@ -1,0 +1,211 @@
+/*  Select all the child and grand-child divs inside of main */
+main div {
+    /* Our cool CSS */
+}
+
+/* 
+> child
++ adjacent sibling
+~ general sibling
+*/
+
+/* the child selector will select an element that is one level of indentation down. */
+/* The divs with the class "child" will get selected by this */
+main>div {
+    /* Our cool CSS */
+}
+
+/* The divs with the class "grand-child" will get selected by this */
+main>div>div {
+    /* More cool CSS */
+}
+
+
+
+
+/* In order to select an element that is adjacent (immediately following) to our target,
+ or on the same level of indentation, we can use the adjacent sibling combinator +. */
+/* Only the div with the classes "child group2" will get selected by this */
+.group1+div {
+    /* Our cool CSS */
+}
+
+/* Only the div with the classes "child group3" will get selected by this */
+.group1+div+div {
+    /* More cool CSS */
+}
+
+
+
+/* Finally, if we want to select all of the siblings following an element and not just the first one,
+ we can use the general sibling combinator ~. */
+/* All of .group1's div siblings - in this case the 2nd and 3rd .child divs, will get selected by this */
+.group1~div {
+    /* Our cool CSS */
+}
+
+
+
+
+
+/* pseudo classes */
+/* Instead of adding the class, we could use the :first-child pseudo-class selector
+ — this will always target the first child element in the article, 
+ and we will no longer need to edit the HTML */
+
+article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* 
+:focus
+-applies to an element that is currently selected by the user
+  either through selecting it with their cursor or using their keyboard.
+
+:hover 
+-will affect anything under the user’s mouse pointer.
+  It can be used to give extra oomph to buttons and links to highlight that they’re interactable,
+  or to trigger a drop-down menu.
+
+:active 
+  applies to elements that are currently being clicked,
+  and is especially useful for giving your user feedback that their action had an effect.
+  This is a great one to give your buttons and other interactive elements more ‘tactile’ feedback. */
+
+/* LINKS */
+
+/* This rule will apply to all links */
+a {
+    text-decoration: underline;
+}
+
+/* This will apply to unvisited links */
+a:link {
+    color: blue;
+}
+
+/* And you guessed it, this applies to all links the user has clicked on */
+a:visited {
+    color: purple;
+}
+
+/* 
+:root
+  is generally the place where you will place your ‘global’ CSS rules that you want available everywhere
+
+:first-child and :last-child 
+  will match elements that are the first or last sibling.
+
+:empty 
+  will match elements that have no children at all
+:only-child 
+  will match elements that don’t have any siblings.
+
+For a more dynamic approach we can use :nth-child.
+*/
+
+.myList:nth-child(5) {
+    /* Selects the 5th element with class myList */
+}
+
+.myList:nth-child(3n) {
+    /* Selects every 3rd element with class myList */
+}
+
+.myList:nth-child(3n + 3) {
+    /* Selects every 3rd element with class myList, beginning with the 3rd */
+}
+
+.myList:nth-child(even) {
+    /* Selects every even element with class myList */
+}
+
+
+
+
+/* pseudo elements */
+/* 
+::marker 
+  allows you to customize the styling of your <li> elements’ bullets or numbers.
+
+::first-letter and ::first-line 
+  allow you to (you guessed it!) give special styling to the first letter or line of some text.
+
+::selection 
+  allows you to change the highlighting when a user selects text on the page. */
+
+
+/* ::before and ::after allow us to add extra elements onto the page with CSS,
+   instead of HTML. Using it to decorate text in various ways is one common use case. */
+<style>
+.emojify::before {
+    content: '😎 😄 🤓';
+}
+
+.emojify::after {
+    content: '🤓 😄 😎';
+}
+
+</style>
+<body>
+<div>Let's <span class="emojify">emojify</span>this span!</div>
+ </body>
+/* output: Let’s 😎 😄 🤓 emojify 🤓 😄 😎 this span! */
+
+
+
+/* ATRIBUTE SELECTORS */
+/* 
+[attribute]
+  This general selector will select anything where the given attribute exists. Its value doesn’t matter.
+
+selector[attribute]
+  Optionally we can combine our attribute selectors with other types of selectors, 
+  such as class or element selectors.
+
+[attribute="value"] 
+  To get really specific, we can use = to match a specific attribute with a specific value.
+*/
+
+[src] {
+    /* This will target any element that has a src attribute. */
+}
+
+img[src] {
+    /* This will only target img elements that have a src attribute. */
+}
+
+img[src="puppy.jpg"] {
+    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+}
+
+/* 
+[attribute^="value"] - ^= Will match strings from the start.
+[attribute$="value"] - $= Will match strings from the end.
+[attribute*="value"] - *= The wildcard selector will match anywhere inside the string. */
+
+[class^='aus'] {
+    /* Classes are attributes too!
+      This will target any class that begins with 'aus':
+      class='austria'
+      class='australia'
+    */
+  }
+  
+  [src$='.jpg'] {
+    /* This will target any src attribute that ends in '.jpg':
+    src='puppy.jpg'
+    src='kitten.jpg'
+    */
+  }
+  
+  [for*='ill'] {
+    /* This will target any for attribute that has 'ill' anywhere inside it:
+    for="bill"
+    for="jill"
+    for="silly"
+    for="ill"
+    */
+  }
+  

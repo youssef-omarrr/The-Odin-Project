@@ -1,0 +1,21 @@
+/* using import and link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* using font-face and a pre-downloaded font */
+@font-face {
+    font-family: my-cool-font;
+    src: url(../fonts/the-font-file.woff);
+}
+
+h1 {
+    font-family: my-cool-font, sans-serif;
+}
+
+/* ellipsis */
+.overflowing {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

@@ -1,0 +1,49 @@
+.error-modal {
+    --color-error-text: red;
+    --modal-border: 1px solid black;
+    --modal-font-size: calc(2rem + 5vw);
+
+    color: var(--color-error-text);
+    border: var(--modal-border);
+    font-size: var(--modal-font-size);
+}
+
+/* start the variable with "--"
+  and when you want to use it use the "var()" function */
+
+/* The var() function actually accepts two parameters:
+  
+   The first parameter we’ve already gone over, which is the custom property we want to assign.
+
+    The second parameter is an optional fallback value. 
+    When a fallback value is provided in addition to a custom property,
+    the fallback value will be used if the custom property is invalid or hasn’t been declared yet. */
+
+.fallback {
+    --color-text: white;
+
+    background-color: var(--undeclared-property, black);
+    color: var(--undeclared-again, var(--color-text, yellow));
+}
+
+
+
+
+/* SCOPES */
+/* variable only available in the selector or its children */
+/* a global variable can be declared in the :root */
+
+
+
+/* The prefers-color-scheme query checks if the user has selected a theme on their OS or browser */
+/* Only dark and light are valid values for the media query, so you can’t use it to implement any themes beyond these two basic ones. */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --border-btn: 1px solid rgb(220, 220, 220);
+      --color-base-bg: rgb(18, 18, 18);
+      --color-base-text: rgb(240, 240, 240);
+      --color-btn-bg: rgb(36, 36, 36);
+      --theme-name: "dark";
+    }
+  }
+  

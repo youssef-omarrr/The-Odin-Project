@@ -1,0 +1,45 @@
+/* The difference between static and relative:
+
+ -Static is the default position of every element, 
+ and properties top, right, bottom, and left do not affect the position of the element. 
+ 
+ -Relative on the other hand is pretty much the same as static, 
+ but properties top, right...(etc.) displace the element relative to its normal position 
+ in the flow of the document. */
+
+
+/* position: absolute allows you to position something at an exact point
+  on the screen without disturbing the other elements around it.
+  (the element will be removed from the normal document flow) 
+  
+  !! elements that are removed from the normal flow of the document don’t affect other
+   elements and are also not affected by other elements.*/
+
+
+/* Fixed elements are also removed from the normal flow of the document 
+   and are positioned relative to the viewport.
+    You basically use top, right, bottom, and left properties to position it,
+    and it will stay there as the user scrolls. This is especially useful for things
+    like navigation bars and floating chat buttons. */
+
+/* Sticky elements will act like normal elements until you scroll past them, 
+    then they start behaving like fixed elements. */
+
+
+    .el {
+        /* default */
+        position: static; 
+
+        /* relative to original position */
+        position: relative;
+
+        /* relative to parent (doesn't move as you scroll)*/
+        position: absolute;
+
+        /* relative to the entire HTML page (moves as you scroll) */
+        position: fixed;
+
+        /* mix of relative and fixed (as you scroll it becomes fixed) */
+        position: sticky;
+        position: inherit;
+      }
