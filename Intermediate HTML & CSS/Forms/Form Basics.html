@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Form Basics.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- 
+    For Methods:
+    We use GET when we want to retrieve something from a server. 
+    For example, Google uses a GET request when you search as it gets the search results.
+
+    POST is used when we want to change something on the server, 
+    for example, when a user makes an account or makes a payment on a website. -->
+
+    <form action="https://httpbin.org/post" method="post">
+        <!-- for is the id that will be used in the input -->
+        <label for="first_name">First Name: </label>
+        <input type="text" id="first_name" placeholder="bepbop_" name="first_name">
+
+        <label for="last_name">Last Name: </label>
+        <input type="text" id="last_name" placeholder="wopwop" name="last_name">
+
+        <label for="user_email">Eamil: </label>
+        <input type="email" id="user_email" name="user_email">
+
+        <label for="user_password">Password:</label>
+        <input type="password" id="user_password" name="password">
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+    </form>
+    <button class="greet_butt">Greet me</button>
+    <h1 class="greetings"></h1>
+
+    <!-- The name attribute serves as a reference to the data inputted into a form control after submitting it.
+    You can think of it as a variable name for the input.
+    Form input should always have a name attribute; otherwise, it will be ignored when the form is submitted. -->
+
+    <textarea rows="5" cols="20" name="textt" id="textt"> wopwopwop</textarea>
+
+    <select name="cars" id="cars">
+        <option value="car1">car1</option>
+        <option value="car2">car2</option>
+        <!-- We can set one of the options to be the default selected
+        element when the browser first renders the form by giving
+        one of the options the "selected" attribute: -->
+        <option value="car3" selected>car3</option>
+        <option value="car4">car4</option>
+    </select>
+
+    <select name="fashion">
+        <optgroup label="testest">
+            <option value="wowo">wowowo</option>
+        </optgroup>
+        <optgroup label="Clothing">
+            <option value="t_shirt" selected>T-Shirts</option>
+            <option value="sweater">Sweaters</option>
+            <option value="coats">Coats</option>
+        </optgroup>
+        <optgroup label="Foot Wear">
+            <option value="sneakers">Sneakers</option>
+            <option value="boots">Boots</option>
+            <option value="sandals">Sandals</option>
+        </optgroup>
+    </select>
+
+
+    <h1>Ticket Type</h1>
+    <!-- When we select one of the radio buttons and then select another,
+    it will deselect the first one. Radio buttons know to do this because
+    they have the same "name" attribute. -->
+    <div>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">Child</label>
+    </div>
+
+    <div>
+        <input type="radio" id="adult" name="ticket_type" value="adult">
+        <label for="adult">Adult</label>
+    </div>
+
+    <!-- We can set the default selected radio button 
+    by adding the "checked" attribute to it: -->
+    <div>
+        <input type="radio" id="senior" name="ticket_type" value="senior" checked>
+        <label for="senior">Senior</label>
+    </div>
+
+
+    <h1>Pizza Toppings</h1>
+    <!-- same here they are all connected by the same "name" NOT ID -->
+    <div>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="onions" name="topping" value="onions" checked>
+        <label for="onions">Onions</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Click to Toggle</button>
+
+    <!-- To gourp items  use fieldset -->
+    <fieldset>
+        <!-- legend is a label for the grouped items -->
+        <legend>Contact Details</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </fieldset>
+
+    <fieldset>
+        <legend>Delivery Details</legend>
+
+        <label for="street_address">Street Address:</label>
+        <input type="text" id="street_address" name="street_address">
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+
+        <label for="zip_code">Zip Code:</label>
+        <input type="text" id="zip_code" name="zip_code">
+    </fieldset>
+
+    <fieldset class="testing">
+        <legend>What would you like to drink?</legend>
+
+        <div>
+            <input type="checkbox" name="drink" id="coffee" value="coffee">
+            <label for="coffee">Coffee</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="drink" id="tea" value="tea">
+            <label for="tea">Tea</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="drink" id="soda" value="soda">
+            <label for="soda">Soda</label>
+        </div>
+    </fieldset>
+
+    <script src="Form Basics.js" defer></script>
+</body>
+
+</html>

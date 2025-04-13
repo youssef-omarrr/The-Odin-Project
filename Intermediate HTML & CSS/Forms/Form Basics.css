@@ -1,0 +1,88 @@
+input {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    gap: 10px;
+    padding-bottom: 10px;
+    max-width: 250px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+fieldset>div {
+    display: flex;
+    padding-left: 10px;
+    gap: 5px;
+    font-size: 1.8rem;
+}
+
+fieldset.testing {
+    display: flex;
+    gap: 10px;
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+fieldset.testing+fieldset.testing {
+    margin-top: 1em;
+}
+
+fieldset>div>input[type="checkbox"] {
+    /* Step 1: Hide the Native Checkbox Input */
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+
+    /* Step 2: Custom Unchecked Checkbox Styles */
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    /* Step 3: Styling :checked vs Unchecked State */
+    display: grid;
+    padding-top: 0.5rem;
+    place-content: center;
+
+}
+
+fieldset>div>input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+
+    /* Windows High Contrast Mode */
+    background-color: rebeccapurple;
+
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+
+/* Pseudo-element changes when the checkbox is checked */
+fieldset>div>input[type="checkbox"]:checked::before {
+    transform: scale(1);          /* Scale up the checkmark to full size, making it visible */
+}
+
+/* Focus styling for the checkbox input for accessibility */
+fieldset>div>input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor; /* Add an outline to the checkbox when focused, ensuring it meets accessibility standards */
+    outline-offset: max(1px, 0.1em);             /* Ensure some space between the outline and the element */
+}
