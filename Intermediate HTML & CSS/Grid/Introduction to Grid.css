@@ -1,0 +1,117 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.flex-container div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1 1 auto;
+}
+
+.grid-container {
+    display: grid;
+
+    /* defines the width of each column (the number of params is the number of columns) */
+    grid-template-columns: 75px 75px 75px;
+    /* defines the hieght of each row */
+    grid-template-rows: 75px 75px;
+
+    /* we can replace the properties for "grid-template-rows" and "grid-template-columns"
+    with the shorthand "grid-template" property. Here we can define our rows and columns all at once */
+    /* ROWS / COLUMNS */
+    grid-template: 50px 50px / 50px 50px 50px;
+
+    /* Let’s say we want any new "rows" to stay the same value
+    as our explicit row track sizes: */
+    grid-auto-rows: 40px;
+
+    /* By default, CSS Grid will add additional content with implicit rows 
+    (any extra elemnt will go to a new row)
+
+    change this with: "grid-auto-flow: column"
+    and change size auto with "grid-auto-columns" */
+
+    /* gaps can be col or row or both */
+    gap: 20px;
+    column-gap: 100px;
+    row-gap: 10px;
+}
+
+.card {
+    background-color: peachpuff;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+.js-button {
+    margin-top: 30px;
+}
+
+html {
+    overscroll-behavior: contain;
+}
+
+.grid {
+    --col: 9.5rem;
+    --row: 8rem;
+    --gap: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, var(--col));
+    grid-template-rows: repeat(4, var(--row));
+    grid-gap: var(--gap);
+}
+
+.grid--full {
+    --col: 30%;
+    --row: 4rem;
+    --gap: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .grid {
+        transition: all 1s;
+    }
+}
+
+button {
+    background-color: #123456;
+    color: #ffffff;
+    margin: 2rem 0;
+    padding: 1.4rem;
+    border: 5px solid #123456;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+button:focus-visible {
+    outline: 4px solid #123456;
+    outline-offset: 4px;
+}
+
+button:hover{
+    border: 5px solid rebeccapurple;
+}
+
+dt {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.js-grid div{
+    background-color: rgb(208, 55, 55);
+    text-align: center;
+    border-radius: 7px;
+
+}

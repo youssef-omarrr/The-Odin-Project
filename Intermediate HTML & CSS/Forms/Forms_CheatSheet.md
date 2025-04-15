@@ -155,3 +155,5 @@
 - **[Go to this link to create checkboxes with this style](https://moderncss.dev/pure-css-custom-checkbox-style/)**\
 ![alt text](image.png)
 ![alt text](image-1.png)
+
+- [**Improving UX froms**](https://www.silocreativo.com/en/css-rescue-improving-ux-forms/)

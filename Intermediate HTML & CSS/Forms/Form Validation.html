@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Form Validation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <div>
+            <label for="user_email">*Email:</label>
+            <!-- To make a field required, we add the "required" attribute to it: -->
+            <input type="email" id="user_email" name="user_email" required>
+        </div>
+        <div>
+            <label for="user_password">*Password:</label>
+            <!-- To make a field required, we add the "required" attribute to it: -->
+            <input type="password" id="user_password" name="user_password" required>
+        </div>
+        <!-- 
+        - To ensure a good user experience and to meet accessibility guidelines,
+        we should always indicate which fields are required. 
+        
+        - This will often be done by adding an asterisk(*)
+        to the required field label like we have done in the example. -->
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- minlength, maxlength => for text areas -->
+    <form action="#" method="get">
+        <textarea name="#" id="#" minlength="10" maxlength="100"></textarea>
+        <button type="submit">go</button>
+    </form>
+
+
+    <!-- min, max => for numbers (quantity)-->
+    <form action="#" method="get">
+        <div>
+            <label for="quantity">Quantity</label>
+        </div>
+        <input type="number" id="quantity" name="quantity" min="1" max="5" value="0">
+
+        <div>
+            <button type="submit">Place Order</button>
+        </div>
+    </form>
+
+    <!-- Pattern validations -->
+    <form action="#" method="get">
+        <div>
+            <label for="zip_code">Postal / Zip Code:</label>
+        </div>
+        <!-- 5 numbers followed by an optional dash and 4 more numbers -->
+         <!-- use "tile" and "placeholder" -->
+        <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" 
+        title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
