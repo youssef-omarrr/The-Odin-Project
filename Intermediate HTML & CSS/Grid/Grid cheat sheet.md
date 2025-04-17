@@ -161,4 +161,5 @@ In most cases, `auto-fill` is going to work **exactly the same way** as `auto-fi
 ### **Additional resources**
 - **[Learn more about the differences between `auto-fit` and `auto-fill`](https://www.youtube.com/watch?v=qjJR3qYCd54)**
 - **[This video provides a summary of CSS grid in a concise format.](https://www.youtube.com/watch?v=EiNiSFIPIQE)**
+- **[Check out this beautiful interactive guide to grid.](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)**
 
