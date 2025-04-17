@@ -1,0 +1,76 @@
+.grid-container {
+    /* This is a property that allows the user to resize the container
+     by clicking and dragging from the bottom right corne */
+    resize: both;
+
+    /* to enable scrolling if we resize the container
+     to be smaller than our grid can accommodate. */
+    overflow: auto;
+
+    display: grid;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid grey;
+    background-color: skyblue;
+
+    /* too much every time */
+    /* grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px 150px 150px; */
+
+    /* instead use repeat(number of times to repeat, the size we want to be repeated) */
+    /* The fr (fractional) unit is a way of distributing whatever remaining space is left in the grid */
+    grid-template-rows: repeat(2, 1fr);
+    /* for uneven distribution */
+    grid-template-columns: repeat(2, 2fr) repeat(3, 1fr);
+
+
+    /* You can also mix static units (like px) and dynamic units (like fr):
+    grid-template-columns: repeat(2, 125px) repeat(3, 1fr); */
+
+
+    /* using min() and max() the % here is the grid container’s height*/
+    grid-template-rows: repeat(2, min(200px, 50%));
+    grid-template-columns: repeat(5, max(120px, 15%));
+
+    /* minmax(): takes the boundries (eg. 150px < grid < 200px */
+    /* grid-template-columns: repeat(5, minmax(150px, 200px)); */
+
+
+    /* clamp():
+    Unlike minmax(), clamp() is a CSS function that can be used anywhere, 
+    not just within a grid container */
+    /* clamp(minimum-size, ideal-size, maximum-size) */
+
+
+    /* auto-fit and auto-fill */
+    /* You want to give your grid a number of columns that is flexible based on the size of the grid. 
+    For example, if our grid is only 200px wide, we may only want one column. 
+    If it’s 400px wide, we may want two, and so on. 
+    Thankfully, auto-fit and auto-fill are here to save the day! */
+    /* width: 1000px; */
+    grid-template-columns: repeat(auto-fit, 200px);
+    /* For this grid, we have a set width of 1000px and we are telling it 
+    to fill in our columns with tracks of 200px each. */
+
+
+    /* The real magic of auto-fit and auto-fill comes when we 
+    incorporate minmax() into the equation. */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.grid-item {
+    background-color: #444;
+    text-align: center;
+    color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+p {
+    margin: 12px auto 24px;
+}
+
+img {
+    height: 60px;
+}
