@@ -163,3 +163,19 @@ In most cases, `auto-fill` is going to work **exactly the same way** as `auto-fi
 - **[This video provides a summary of CSS grid in a concise format.](https://www.youtube.com/watch?v=EiNiSFIPIQE)**
 - **[Check out this beautiful interactive guide to grid.](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)**
 
+---
+
+## Using Flexbox and Grid
+### Content first vs layout first design
+A way to decide between `Grid` and `Flexbox` is to consider if your design starts from the **content**, or from the **layout**.
+
+**In Content First Design,** you begin with clarity of how the *content* should be, and the layout follows. This is a great opportunity to use **Flexbox**. Its flexible nature gives you control of the behavior of items through logical rules. How they grow, shrink, their ideal size and position in relation to each other, all make the layout dynamic. While Flexbox gives you control over its content, the final layout is only a consequence. Depending on the dimensions of the flex container, the general layout can change a lot.
+
+**In Layout First Design,** you decide how you want the *pieces arranged*, then fill in the content. That is when Grid shines. Defining grid row and column tracks gives you full control of layout. Content in a grid can only fill the spaces of explicit or implicit tracks. So, when you have an idea of how the big picture of a container should look like, Grid is the clear choice.
+
+### Combining flexbox and grid
+- If you have **one-dimensional** content, *Flexbox* can make it easier to control how that content is positioned in a Flex container. 
+- If, on the other hand, you want to accurately place content on a complex layout in **two-dimensions**, *Grid* can be easier to use.
+
+### **Additional resources**
+- **[Flexbox or grid - How to decide?](https://www.youtube.com/watch?v=3elGSZSWTbM)** (very recommended)
