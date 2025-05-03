@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Modals & Collapse Demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+    <div class="container">
+        <h1 class="mb-4">Bootstrap 5 Modals & Collapse Demo</h1>
+
+        <!-- 1. Basic Modal -->
+        <section class="mb-5">
+            <h2>1. Basic Modal</h2>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                Launch Basic Modal
+            </button>
+
+            <div class="modal fade" id="basicModal" tabindex="-1" aria-labelledby="basicModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="basicModalLabel">Basic Modal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            This is the body of a basic modal.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Modal Sizes -->
+        <section class="mb-5">
+            <h2>2. Modal Sizes</h2>
+            <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#smModal">Small
+                Modal</button>
+            <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#lgModal">Large
+                Modal</button>
+            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#xlModal">Extra Large
+                Modal</button>
+
+            <!-- Small -->
+            <div class="modal fade" id="smModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Small Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Modal-sm content.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Large -->
+            <div class="modal fade" id="lgModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Large Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Modal-lg content.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Extra Large -->
+            <div class="modal fade" id="xlModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Extra Large Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Modal-xl content.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Vertically Centered & Scrollable -->
+        <section class="mb-5">
+            <h2>3. Vertically Centered & Scrollable</h2>
+            <button class="btn btn-outline-secondary me-2" data-bs-toggle="modal"
+                data-bs-target="#centerModal">Vertically Centered</button>
+            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#scrollModal">Scrollable
+                Content</button>
+
+            <!-- Centered -->
+            <div class="modal fade" id="centerModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Centered Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">This modal is vertically centered.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scrollable -->
+            <div class="modal fade" id="scrollModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Scrollable Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum commodi quibusdam ex quae officiis corporis eveniet reiciendis hic totam ea, at, atque impedit in vero quaerat accusamus laudantium sequi eius. Possimus, consequuntur. Repellat at laudantium quibusdam perferendis rem corporis nemo quidem labore voluptatum porro mollitia laborum possimus doloremque, facilis molestiae autem incidunt repudiandae quaerat id non natus a voluptates enim! Voluptatum tempore minus quisquam quo similique, rerum officiis quidem et vel, earum adipisci amet inventore voluptatibus ipsa nulla quod, perferendis eum. Sunt tempora odio sequi, autem placeat perferendis esse! Ut earum fugiat voluptatum eligendi in, voluptatibus alias rem expedita laboriosam aliquid, doloremque sint itaque est amet dignissimos ducimus, placeat eveniet? Possimus dolor a doloribus neque delectus eos nam perspiciatis in cumque enim illum voluptate maxime fuga reprehenderit excepturi nisi soluta, dolore aspernatur eius fugit impedit vitae accusamus dicta porro. Facilis asperiores corporis ea qui architecto laboriosam, placeat libero? Labore veritatis unde magni illo inventore, totam voluptate incidunt modi laudantium at, atque eum provident est dolor ipsam tenetur nemo perferendis? Repudiandae, error voluptatibus quod cumque doloremque rerum libero cum eos, distinctio voluptates ipsa nihil culpa voluptatem laboriosam reprehenderit eius itaque, nam dolores blanditiis architecto recusandae mollitia vel. Numquam iusto aut expedita!</p>
+                            <!-- repeated content -->
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Static Backdrop & Keyboard Disabled -->
+        <section class="mb-5">
+            <h2>4. Static Backdrop & Keyboard Disabled</h2>
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticModal"
+                data-bs-backdrop="static" data-bs-keyboard="false">
+                Static / No Keyboard Dismiss
+            </button>
+            <div class="modal fade" id="staticModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Static Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Cannot close by clicking outside or pressing Escape.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Programmatic Control -->
+        <section class="mb-5">
+            <h2>5. Programmatic Modal Control</h2>
+            <button id="openModalBtn" class="btn btn-warning">Open via JS</button>
+            <button id="closeModalBtn" class="btn btn-danger">Close via JS</button>
+
+            <div class="modal fade" id="progModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Programmatic Modal</h5><button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Controlled by JavaScript API.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Collapse Basic & Accordion -->
+        <section class="mb-5">
+            <h2>6. Collapse & Accordion</h2>
+            <!-- Basic Collapse -->
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#basicCollapse" role="button"
+                    aria-expanded="false" aria-controls="basicCollapse">
+                    Toggle Content
+                </a>
+            </p>
+            <div class="collapse mb-3" id="basicCollapse">
+                <div class="card card-body">This content is collapsible.</div>
+            </div>
+
+            <!-- Accordion -->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">Shown by default.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">Hidden by default.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Programmatic modal control
+            const progModalEl = document.getElementById('progModal');
+            const progModal = new bootstrap.Modal(progModalEl);
+            document.getElementById('openModalBtn').addEventListener('click', () => progModal.show());
+            document.getElementById('closeModalBtn').addEventListener('click', () => progModal.hide());
+        </script>
+    </div>
+
+</body>
+
+</html>

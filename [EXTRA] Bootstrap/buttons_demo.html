@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Buttons Demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+    <h1 class="mb-4">Bootstrap 5 Buttons Demo</h1>
+
+    <!-- 1. Base & Variants -->
+    <section class="mb-5">
+        <h2>Base & Variant Buttons</h2>
+        <button type="button" class="btn">Base</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </section>
+
+    <!-- 2. Outline Buttons -->
+    <section class="mb-5">
+        <h2>Outline Buttons</h2>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-outline-light text-dark">Light</button>
+    </section>
+
+    <!-- 3. Sizes -->
+    <section class="mb-5">
+        <h2>Button Sizes</h2>
+        <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+        <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+    </section>
+
+    <!-- 4. Block (Full-Width) -->
+    <section class="mb-5">
+        <h2>Block (Full-Width) Buttons</h2>
+        <button type="button" class="btn btn-success w-100 mb-2">Full Width</button>
+        <button type="button" class="btn btn-outline-success d-block mx-auto" style="width:50%;">50% Width
+            Centered</button>
+    </section>
+
+    <!-- 5. Disabled State -->
+    <section class="mb-5">
+        <h2>Disabled Buttons</h2>
+        <button type="button" class="btn btn-primary" disabled>Native Disabled</button>
+        <button type="button" class="btn btn-secondary disabled">Class Disabled</button>
+    </section>
+
+    <!-- 6. Toggle Buttons (Plugin API) -->
+    <section class="mb-5">
+        <h2>Toggle Buttons (data‑bs‑toggle)</h2>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="button" aria-pressed="false">
+            Toggle Me
+        </button>
+    </section>
+
+    <!-- 7. Checkbox & Radio Toggles -->
+    <section class="mb-5">
+        <h2>Checkbox & Radio Toggle Buttons</h2>
+        <!-- Checkbox toggle -->
+        <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+        <label class="btn btn-outline-success" for="btn-check-1">Checkbox Toggle</label>
+        <!-- Radio toggle group -->
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-danger" for="btnradio1">Radio 1</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-danger" for="btnradio2">Radio 2</label>
+    </section>
+
+    <!-- 8. Button Groups & Toolbars -->
+    <section class="mb-5">
+        <h2>Button Groups & Toolbars</h2>
+        <!-- Horizontal Toolbar -->
+        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+                <button type="button" class="btn btn-primary">3</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-secondary">A</button>
+                <button type="button" class="btn btn-secondary">B</button>
+            </div>
+        </div>
+
+        <!-- Vertical Group -->
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with vertical button group">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical group">
+                <button type="button" class="btn btn-success">Top</button>
+                <button type="button" class="btn btn-success">Middle</button>
+                <button type="button" class="btn btn-success">Bottom</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Programmatic Toggle via JS -->
+    <section class="mb-5">
+        <h2>Programmatic Toggle (JavaScript API)</h2>
+        <button id="js-toggle-btn" type="button" class="btn btn-warning">
+            JS Toggle Me
+        </button>
+        <script>
+            // Instantiate the button plugin
+            const jsBtnEl = document.getElementById('js-toggle-btn');
+            const jsBtn = new bootstrap.Button(jsBtnEl);
+
+            // Toggle state on click
+            jsBtnEl.addEventListener('click', () => {
+                jsBtn.toggle();
+            });
+        </script>
+    </section>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
